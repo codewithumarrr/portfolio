@@ -10,7 +10,7 @@ function Projects() {
       des: 'A feature-rich SaaS platform tailored for construction professionals, offering tools for efficient project management, collaboration, and task organization.',
       mission: 'Front-End Development: Responsive UI with React.js and Material-UI. Real-Time Collaboration Tools: PDF annotations for team collaboration.',
       language: 'React.js, Material-UI, Redux, MongoDB, REST APIs',
-      images: 'buildware-web.png', 
+      images: '/portfolio/buildware-web.png', 
       link: 'https://buildware.app'
     },
     {
@@ -18,7 +18,7 @@ function Projects() {
       des: 'Extends the BuildWare SaaS platform to mobile devices, empowering construction professionals with on-the-go project management tools.',
       mission: 'React Native Development: Responsive and user-friendly mobile app. Offline Functionality: Seamless on-site usage with Redux Persist.',
       language: 'React Native, Redux, AsyncStorage, REST APIs',
-      images: '/buildware-mobile.png', 
+      images: '/portfolio/buildware-mobile.png',
       link: 'https://play.google.com/store/apps/details?id=com.buildware.dev&pcampaignid=web_share'
     },
     {
@@ -26,7 +26,7 @@ function Projects() {
       des: 'A robust retail supply chain management system designed to optimize operations and streamline data flow with a combination of ASP.NET Core backend and Razor Pages frontend.',
       mission: 'Front-End Development: Razor Pages combined with jQuery for dynamic user interactions. Back-End Development: Enhanced API functionality and streamlined backend processes.',
       language: 'ASP.NET Core, Razor Pages, jQuery, SQL Server',
-      images: '/oddyman.png', 
+      images: '/portfolio/oddyman.png',
       link: 'https://oddyman.co.za/'
     }
   ]);

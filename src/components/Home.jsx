@@ -16,7 +16,7 @@ function Home() {
                 </div>
                 
                 <a 
-                    href="/democv.pdf" 
+                    href="/portfolio/my-resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="download-cv animation active"
@@ -27,12 +27,12 @@ function Home() {
             </div>
             <div className="avatar">
                 <div className="card">
-                    <img src="/avatar.jpg" alt="Avatar of Umar Fayaz" />
+                    <img src="/portfolio/my-pic.jpeg" alt="Avatar of Umar Fayaz" />
                     <div className="info">
-                        <div>Role: Full-Stack Developer</div>
-                        <div>Location: Islamabad, Pakistan</div>
-                        <div>Experience: 4+ Years</div>
-                        <div>Specialization: React.js, Next.js</div>
+                        <div>Role: <span className='info--normal-text'>Full-Stack Developer</span></div>
+                        <div>Location: <span className='info--normal-text'>Islamabad, Pakistan</span></div>
+                        <div>Experience: <span className='info--normal-text'>4+ Years</span></div>
+                        <div>Specialization: <span className='info--normal-text'>React.js, Next.js</span></div>
                     </div>
                 </div>
             </div>
