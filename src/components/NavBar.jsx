@@ -19,7 +19,7 @@ const NavBar = ({activeTab}) => {
     return (
         <header>
             <div className="logo">
-                <img src="/logo.png" alt=""/> Umar's Portfolio
+                <img src="/portfolio/logo.png" alt="Initials of Umar Fayaz, logo."/> Umar's Portfolio
             </div>
             <nav className={statusNav}>
                 {
