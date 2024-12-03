@@ -249,6 +249,7 @@ section.skills {
 }
 
 section.projects {
+    position: relative;
     & .title {
         margin-top: 100px;
         text-align: center;
@@ -274,17 +275,40 @@ section.projects {
             margin-bottom: 100px;
             gap: 20px;
 
+            & .images:hover {
+                & .tooltip {
+                    z-index: 3;
+                    padding: 12px 20px;
+                    transform: translateY(30px);
+                }
+            }
+
             & .images {
                 background-image: linear-gradient(-45deg, #473bb4, #be24a9);
                 padding: 40px;
                 text-align: center;
                 border-radius: 20px;
                 overflow: hidden;
+                position: relative;
 
                 & img {
                     height: 400px;
                     border-radius: 10px;
                     box-shadow: 0 20px 40px #010824;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                & .tooltip {
+                    background-image: linear-gradient(-145deg, #473bb4, #be24a9, #181212);
+                    padding: 17px 10px;
+                    text-align: center;
+                    transition: transform .4s;
+                    border-radius: 7px;
+                    position:absolute;
+                    bottom: 28px;
+                    right: 0;
+                    
                 }
             }
 
@@ -364,7 +388,7 @@ section.contacts {
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.010);
         transition: transform 0.2s, box-shadow 0.2s;
     }
 
@@ -509,4 +533,6 @@ section.contacts {
             left: 0;
         }
     }
+
+    
 }

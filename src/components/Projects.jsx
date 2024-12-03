@@ -1,34 +1,50 @@
-import React, { useState, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
-import CustomHook from './CustomHook';
+import React, { useState, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPersonCircleQuestion,
+  faEarthAmericas,
+  faTrophy,
+} from "@fortawesome/free-solid-svg-icons";
+import CustomHook from "./CustomHook";
 
 function Projects() {
   const [listProjects] = useState([
     {
-      name: 'BuildWare SaaS Application',
-      des: 'A feature-rich SaaS platform tailored for construction professionals, offering tools for efficient project management, collaboration, and task organization.',
-      mission: 'Front-End Development: Responsive UI with React.js and Material-UI. Real-Time Collaboration Tools: PDF annotations for team collaboration.',
-      language: 'React.js, Material-UI, Redux, MongoDB, REST APIs',
-      images: '/portfolio/buildware-web.png', 
-      link: 'https://buildware.app'
+      name: "BuildWare SaaS Application",
+      des: "A comprehensive SaaS platform designed specifically for construction industry professionals to streamline project management, enhance collaboration, and improve overall task efficiency.",
+      mission:
+        "Develop a responsive user interface using React.js and Material-UI, integrate real-time collaboration tools allowing for in-app PDF annotations.",
+      techStack:
+        "Typescript, React.js, Material-UI, Redux, MongoDB, REST APIs, Unit testing with Jest, Playwright for end-to-end testing, React Hook Form, Zod for data validation",
+      keyAchievements:
+        "Boosted client productivity by 30% with custom collaboration tools and streamlined project management interfaces.",
+      images: "/portfolio/buildware-web.png",
+      link: "https://buildware.app",
     },
     {
-      name: 'BuildWare Mobile App',
-      des: 'Extends the BuildWare SaaS platform to mobile devices, empowering construction professionals with on-the-go project management tools.',
-      mission: 'React Native Development: Responsive and user-friendly mobile app. Offline Functionality: Seamless on-site usage with Redux Persist.',
-      language: 'React Native, Redux, AsyncStorage, REST APIs',
-      images: '/portfolio/buildware-mobile.png',
-      link: 'https://play.google.com/store/apps/details?id=com.buildware.dev&pcampaignid=web_share'
+      name: "BuildWare Mobile App",
+      des: "Mobile extension of the BuildWare platform, enabling construction professionals to manage projects effectively from anywhere.",
+      mission:
+        "Create a mobile application using React Native that is responsive and user-friendly. Implement offline functionality with Redux Persist for enhanced on-site performance.",
+      techStack:
+        "React Native, Redux, AsyncStorage, REST APIs, Integration with native modules for improved performance",
+      keyAchievements:
+        "Achieved a 40% increase in on-the-go project updates among users, significantly reducing delays and increasing operational efficiency.",
+      images: "/portfolio/buildware-mobile.png",
+      link: "https://play.google.com/store/apps/details?id=com.buildware.dev&pcampaignid=web_share",
     },
     {
-      name: 'OddyMan ASP.NET Core Application',
-      des: 'A robust retail supply chain management system designed to optimize operations and streamline data flow with a combination of ASP.NET Core backend and Razor Pages frontend.',
-      mission: 'Front-End Development: Razor Pages combined with jQuery for dynamic user interactions. Back-End Development: Enhanced API functionality and streamlined backend processes.',
-      language: 'ASP.NET Core, Razor Pages, jQuery, SQL Server',
-      images: '/portfolio/oddyman.png',
-      link: 'https://oddyman.co.za/'
-    }
+      name: "OddyMan ASP.NET Core Application",
+      des: "Innovative retail supply chain management system designed to optimize operations, enhance data flow, and improve decision-making through advanced data analytics.",
+      mission:
+        "Leverage ASP.NET Core for robust backend services and create dynamic user interfaces with jQuery on Razor Pages. Streamline API interactions and backend processes.",
+      techStack:
+        "ASP.NET Core, Razor Pages, jQuery, SQL Server, Entity Framework, Azure Services for cloud infrastructure, Automated testing with xUnit",
+      keyAchievements:
+        "Enabled real-time supply chain adjustments, cutting operational costs by 20% and improving data visibility across the board.",
+      images: "/portfolio/oddyman.png",
+      link: "https://oddyman.co.za/",
+    },
   ]);
 
   const divs = useRef([]);
@@ -45,20 +61,25 @@ function Projects() {
         My Projects
       </div>
       <div className="des" ref={(el) => el && divs.current.push(el)}>
-        Here are some of my professional projects that showcase my skills in building scalable, user-centric, and high-performance applications:
+        Below are some of my key professional projects. They illustrate my
+        expertise in delivering scalable, user-centric, and
+        performance-optimized solutions across diverse platforms:
       </div>
-      <div className="list">
+      <div className="list tool">
         {listProjects.map((value, key) => (
           <div
             className="item"
             key={key}
             ref={(el) => el && divs.current.push(el)}
             onClick={() => handleProjectClick(value.link)} // Navigate on click
-            style={{ cursor: 'pointer', transition: 'transform 0.2s' }} // Smooth scaling transition
-            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')} // Scale up on hover
-            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')} // Scale back on mouse leave
+            style={{ cursor: "pointer", transition: "transform 0.2s" }} // Smooth scaling transition
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "scale(1.05)")
+            } // Scale up on hover
+            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")} // Scale back on mouse leave
           >
             <div className="images">
+              <div className="tooltip">Click on the Image for details</div>
               <img src={value.images} alt={`${value.name} screenshot`} />
             </div>
             <div className="content">
@@ -78,8 +99,17 @@ function Projects() {
                   <FontAwesomeIcon icon={faEarthAmericas} />
                 </div>
                 <div>
-                  <h4>Languages</h4>
-                  <div className="des">{value.language}</div>
+                  <h4>Tech Stack</h4>
+                  <div className="des">{value.techStack}</div>
+                </div>
+              </div>
+              <div className="mission">
+                <div>
+                  <FontAwesomeIcon icon={faTrophy} />
+                </div>
+                <div>
+                  <h4>Key Achievements</h4>
+                  <div className="des">{value.keyAchievements}</div>
                 </div>
               </div>
             </div>

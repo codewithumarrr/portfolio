@@ -1,35 +1,39 @@
-import React, { useState, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import CustomHook from './CustomHook';
+import React, { useState, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons"; // Import WhatsApp icon
+import CustomHook from "./CustomHook";
 
 function Contacts() {
   const [listContacts] = useState([
     {
-      title: 'Phone Number',
-      icon: faPhoneAlt,
-      value: '+92306-5351704',
-      link: 'tel:+923065351704' // Click-to-call link
+      title: "WhatsApp",
+      icon: faWhatsapp,
+      value: "+923065351704",
+      link: "https://wa.me/923065351704",
     },
     {
-      title: 'Email',
+      title: "Email",
       icon: faEnvelope,
-      value: 'buildwithumar@gmail.com',
-      link: 'mailto:buildwithumar@gmail.com' // Email link
+      value: "buildwithumar@gmail.com",
+      link: "mailto:buildwithumar@gmail.com",
     },
     {
-      title: 'GitHub',
+      title: "GitHub",
       icon: faGithub,
-      value: 'https://github.com/codewithumarrr',
-      link: 'https://github.com/codewithumarrr' // GitHub profile link
+      value: "https://github.com/codewithumarrr",
+      link: "https://github.com/codewithumarrr",
     },
     {
-      title: 'LinkedIn',
+      title: "LinkedIn",
       icon: faLinkedin,
-      value: 'https://linkedin.com/in/umar95global',
-      link: 'https://linkedin.com/in/umar95global' // LinkedIn profile link
-    }
+      value: "https://linkedin.com/in/umar95global",
+      link: "https://linkedin.com/in/umar95global",
+    },
   ]);
 
   const divs = useRef([]);
@@ -42,7 +46,9 @@ function Contacts() {
         Get in Touch
       </div>
       <div className="des" ref={(el) => el && divs.current.push(el)}>
-        I’m always open to discussing new projects, creative ideas, or opportunities to contribute to impactful solutions. Here’s how you can reach me:
+        I’m always open to discussing new projects, creative ideas, or
+        opportunities to contribute to impactful solutions. Here’s how you can
+        reach me:
       </div>
       <div className="list" ref={(el) => el && divs.current.push(el)}>
         {listContacts.map((contact, key) => (
