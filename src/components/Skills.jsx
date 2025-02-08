@@ -18,8 +18,8 @@ function Skills() {
 
   const [listSkills] = useState([
     {
-      name: 'React.js & Next.js',
-      des: '4+ years of experience in building scalable, high-performance web applications using React.js and Next.js. Skilled in advanced hooks, state management (Redux, Zustand), and server-side rendering (SSR).',
+      name: 'React, React Native & Next.js',
+      des: '4+ years of experience in building scalable, high-performance web and mobile applications using React.js, React native and Next.js. Skilled in advanced hooks, state management (Redux, Zustand, Expo), and server-side rendering (SSR).',
       icon: faReact
     },
     {
