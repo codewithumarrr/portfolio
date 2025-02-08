@@ -258,7 +258,7 @@ section.projects {
     }
 
     & .des {
-        color: #eee5;
+        color: rgba(238, 238, 238, 0.372);
         text-align: center;
         max-width: 500px;
         margin: auto;

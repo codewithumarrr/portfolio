@@ -15,7 +15,7 @@ function Projects() {
       mission:
         "Develop a responsive user interface using React.js and Material-UI, integrate real-time collaboration tools allowing for in-app PDF annotations.",
       techStack:
-        "Typescript, React.js, Material-UI, Redux, MongoDB, REST APIs, Unit testing with Jest, Playwright for end-to-end testing, React Hook Form, Zod for data validation",
+        "TypeScript, React.js, Material-UI, Redux, MongoDB, REST APIs, Unit testing with Jest, Playwright for end-to-end testing, React Hook Form, Zod for data validation",
       keyAchievements:
         "Boosted client productivity by 30% with custom collaboration tools and streamlined project management interfaces.",
       images: "/portfolio/buildware-web.png",
@@ -45,14 +45,27 @@ function Projects() {
       images: "/portfolio/oddyman.png",
       link: "https://oddyman.co.za/",
     },
+    {
+      name: "Regent Business School - Educational Platform",
+      des: "A scalable educational application developed in collaboration with Regent Business School to facilitate online learning, course management, and interactive student engagement.",
+      mission:
+        "Design and develop a **modern e-learning platform** with a user-friendly interface, enabling students and educators to access course materials, submit assignments, and participate in discussions seamlessly. Implemented a responsive design for a **mobile-first experience**, ensuring accessibility across all devices.",
+      techStack:
+        "React.js, Tailwind CSS, Shadcn UI, Zustand for state management, Node.js, PostgreSQL, Firebase authentication",
+      keyAchievements:
+        "Enhanced the institution’s digital learning experience by creating an interactive, fast, and accessible platform, improving student engagement and faculty collaboration.",
+      images: "/portfolio/regent-web.png",
+      link: "https://dev.sis-regent.co.za/",
+    },
   ]);
+
 
   const divs = useRef([]);
   const scrollTab = useRef();
   CustomHook(scrollTab, divs);
 
   const handleProjectClick = (link) => {
-    window.location.href = link; // Navigates to the project's URL
+    window.open(link, "_blank");
   };
 
   return (
